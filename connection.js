@@ -1,9 +1,10 @@
+// async function main(callback) {
 async function main(callback) {
   const mongoose = require("mongoose");
   console.log("[DB] begin connect db successfully.");
 
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
+    mongoose.connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
